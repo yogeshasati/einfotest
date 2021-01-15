@@ -1,0 +1,57 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+FAILURE	threadApi.h	16;"	d
+FALSE	threadApi.h	8;"	d
+ITERALS	readers_writer.c	11;"	d	file:
+JOINABLE	readers_writer.c	10;"	d	file:
+MAX_POOL_SIZE	threadApi.h	19;"	d
+NREADERS	readers_writer.c	6;"	d	file:
+NWRITERS	readers_writer.c	7;"	d	file:
+Nreader_count	readers_writer.c	/^    int Nreader_count; \/\/ Number of readers$/;"	m	struct:resource	file:
+Nreader_count_mutex	readers_writer.c	/^    pthread_mutex_t Nreader_count_mutex; \/\/ mutex for Nreader_count variable as it is accessed by reader(s) and writer$/;"	m	struct:resource	file:
+RESOURCE_UNITS	readers_writer.c	9;"	d	file:
+SUCCESS	threadApi.h	12;"	d
+TRUE	threadApi.h	4;"	d
+_pool_add	threadApi.c	/^_pool_add(blocked_pool_t *block_pool, _pthread_t *thread)$/;"	f	file:
+_pool_blocked_threads_	threadApi.h	/^typedef struct _pool_blocked_threads_{$/;"	s
+_pthread_t	threadApi.h	/^} _pthread_t;$/;"	t	typeref:struct:_pthread_t_
+_pthread_t_	threadApi.h	/^typedef struct _pthread_t_{$/;"	s
+add_thread_to_pool	threadApi.c	/^add_thread_to_pool(blocked_pool_t *block_pool , _pthread_t *thread)$/;"	f
+attr	threadApi.h	/^    pthread_attr_t attr;   $/;"	m	struct:_pthread_t_
+blocked_pool_t	threadApi.h	/^} blocked_pool_t;$/;"	t	typeref:struct:_pool_blocked_threads_
+blocked_thread_collection	threadApi.h	/^     _pthread_t* blocked_thread_collection[MAX_POOL_SIZE];$/;"	m	struct:_pool_blocked_threads_
+cleanup_pthread	threadApi.c	/^void cleanup_pthread(_pthread_t *thread)$/;"	f
+cond	threadApi.h	/^    pthread_cond_t cond;   $/;"	m	struct:_pthread_t_
+dump_block_pool	threadApi.c	/^dump_block_pool(blocked_pool_t *block_pool){$/;"	f
+dump_thread_DS	threadApi.c	/^dump_thread_DS(_pthread_t *thread)$/;"	f
+get_blocked_thread_from_pool	threadApi.c	/^get_blocked_thread_from_pool(blocked_pool_t *block_pool){$/;"	f
+get_empty_slot_from_pool	threadApi.c	/^get_empty_slot_from_pool(blocked_pool_t *block_pool){$/;"	f
+get_empty_slot_from_pool_mutex	threadApi.c	/^get_empty_slot_from_pool_mutex(blocked_pool_t *block_pool){$/;"	f
+init_blocked_pool	threadApi.c	/^init_blocked_pool(blocked_pool_t *block_pool, unsigned int pool_size){$/;"	f
+isWaiting	threadApi.h	/^    char isWaiting;         $/;"	m	struct:_pthread_t_
+is_thread_in_block_pool	threadApi.c	/^is_thread_in_block_pool(unsigned int thid, blocked_pool_t *block_pool){$/;"	f
+is_thread_in_block_pool_mutex	threadApi.c	/^is_thread_in_block_pool_mutex(unsigned int thid, blocked_pool_t *block_pool){$/;"	f
+main	readers_writer.c	/^main(int argc, char **argv){$/;"	f
+pool_mutex	threadApi.h	/^     pthread_mutex_t pool_mutex;$/;"	m	struct:_pool_blocked_threads_
+pool_size	threadApi.h	/^     unsigned int pool_size;$/;"	m	struct:_pool_blocked_threads_
+pthread_handle	threadApi.h	/^    pthread_t pthread_handle;$/;"	m	struct:_pthread_t_
+pthread_init	threadApi.c	/^void pthread_init(_pthread_t *_pthread, unsigned int tid, unsigned int JOINABLE)$/;"	f
+read	readers_writer.c	/^void *read(void *t){$/;"	f
+reader_threads	readers_writer.c	/^_pthread_t reader_threads[NREADERS];$/;"	v
+remove_thread_from_pool	threadApi.c	/^remove_thread_from_pool(blocked_pool_t *block_pool, _pthread_t *thread){$/;"	f
+resource	readers_writer.c	/^resource_t resource;$/;"	v
+resource	readers_writer.c	/^typedef struct resource{$/;"	s	file:
+resource_t	readers_writer.c	/^} resource_t;$/;"	t	typeref:struct:resource	file:
+resrc_mutex	readers_writer.c	/^    pthread_mutex_t resrc_mutex;$/;"	m	struct:resource	file:
+resume_thread_id	threadApi.h	/^    unsigned int resume_thread_id; $/;"	m	struct:_pthread_t_
+selfid	threadApi.h	/^    unsigned int selfid;             $/;"	m	struct:_pthread_t_
+signal	threadApi.c	/^signal (_pthread_t *signalling_thread, _pthread_t *signalled_thread, unsigned int line_no){$/;"	f
+slot	readers_writer.c	/^    char *slot[RESOURCE_UNITS];$/;"	m	struct:resource	file:
+uint8_t	threadApi.c	5;"	d	file:
+wait	threadApi.c	/^wait (_pthread_t *thread_to_block, pthread_mutex_t *mutex, unsigned int line_no){$/;"	f
+write	readers_writer.c	/^void *write(void *t){$/;"	f
+writer_threads	readers_writer.c	/^_pthread_t writer_threads[NWRITERS];$/;"	v
