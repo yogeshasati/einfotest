@@ -1,0 +1,20 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+N_SLAVES	master_slave1.c	25;"	d	file:
+N_SLAVES	master_slave1_async_cancellation.c	25;"	d	file:
+N_SLAVES	master_slave1_async_cancellation_cleanup_handlers.c	25;"	d	file:
+file_cleanup_handler	master_slave1_async_cancellation_cleanup_handlers.c	/^file_cleanup_handler(void *arg) {$/;"	f
+main	master_slave1.c	/^main(int argc, char **argv){$/;"	f
+main	master_slave1_async_cancellation.c	/^main(int argc, char **argv){$/;"	f
+main	master_slave1_async_cancellation_cleanup_handlers.c	/^main(int argc, char **argv){$/;"	f
+memory_cleanup_handler	master_slave1_async_cancellation_cleanup_handlers.c	/^memory_cleanup_handler(void *arg) {$/;"	f
+slaves	master_slave1.c	/^pthread_t slaves[N_SLAVES];$/;"	v
+slaves	master_slave1_async_cancellation.c	/^pthread_t slaves[N_SLAVES];$/;"	v
+slaves	master_slave1_async_cancellation_cleanup_handlers.c	/^pthread_t slaves[N_SLAVES];$/;"	v
+write_into_file	master_slave1.c	/^write_into_file(void *arg){$/;"	f
+write_into_file	master_slave1_async_cancellation.c	/^write_into_file(void *arg){$/;"	f
+write_into_file	master_slave1_async_cancellation_cleanup_handlers.c	/^write_into_file(void *arg){$/;"	f

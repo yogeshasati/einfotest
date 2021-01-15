@@ -1,0 +1,7 @@
+MutexDemo:mutex_example.o
+	gcc -g mutex_example.o -o MutexDemo -lpthread
+mutex_example.o:mutex_example.c
+	gcc -g -c mutex_example.c -o mutex_example.o
+clean:
+	rm mutex_example.o
+	rm MutexDemo
