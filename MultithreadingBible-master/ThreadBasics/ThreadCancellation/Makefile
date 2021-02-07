@@ -1,17 +1,47 @@
-obj:
-	gcc -g -c master_slave1.c  master_slave1_async_cancellation.c  master_slave1_async_cancellation_cleanup_handlers.c
+CC = gcc
+CFLAGS = -Wall -g
+LINKER = -o
+LD = -lpthread
 
-all:master_slave1.exe master_slave1_async_cancellation.exe master_slave1_async_cancellation_cleanup_handlers.exe
+PROG1 = master_slave1.exe
+PROG2 = master_slave1_async_cancellation.exe
+PROG3 = master_slave1_async_cancellation_cleanup_handlers.exe
 
-master_slave1.exe:
-	gcc -g master_slave1.o -o master_slave1.exe -lpthread
+OBJ1 = master_slave1.o
+OBJ2 = master_slave1_async_cancellation.o
+OBJ3 = master_slave1_async_cancellation_cleanup_handlers.o
 
-master_slave1_async_cancellation.exe:
-	gcc -g master_slave1_async_cancellation.o -o master_slave1_async_cancellation.exe -lpthread
+all:$(PROG1) $(PROG2) $(PROG3)
+#obj:
+#	gcc -g -c master_slave1.c  master_slave1_async_cancellation.c  master_slave1_async_cancellation_cleanup_handlers.c
 
-master_slave1_async_cancellation_cleanup_handlers.exe:
-	gcc -g master_slave1_async_cancellation_cleanup_handlers.o -o master_slave1_async_cancellation_cleanup_handlers.exe -lpthread
+$(PROG1): $(OBJ1)
+	@echo "---------------------------------------------"
+	@echo Compiling and creating master_slave executable
+	@echo "---------------------------------------------"
+	$(CC)  master_slave1.c $(LINKER) $(PROG1) $(LD)
 
+$(PROG2): $(OBJ2)
+	@echo "---------------------------------------------"
+	@echo Compiling and creating  master_slave1_async_cancellation executable
+	@echo "---------------------------------------------"
+	$(CC)  master_slave1_async_cancellation.c $(LINKER)  $(PROG2) $(LD)
+
+$(PROG3): $(OBJ3)
+	@echo "---------------------------------------------"
+	@echo Compiling and creating master_slave1_async_cancellation_cleanup_handlers executable
+	@echo "---------------------------------------------"
+	$(CC)  master_slave1_async_cancellation_cleanup_handlers.c $(LINKER)  $(PROG3) $(LD)
+
+#	mv master_slave1.o $(pwd)/obj/ 
 clean:
-	rm *.o
-	rm *exe
+	@echo "---------------------------------------------"
+	@echo Cleaning
+	@echo "---------------------------------------------"
+	rm -f *.o  *.exe
+
+#%o:%c
+#	$(CC) $<
+#
+#
+#
